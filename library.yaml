@@ -10,6 +10,9 @@ default_dirs:
     - global: ~/.claude/commands/
 
 library:
-  skills: []
+  skills:
+    - name: commit-push
+      description: Write a semantic commit message from staged changes, commit, and push to the remote. Enforces Jose's preferred commit style (semantic prefix, bulleted changes with filenames only, closing summary paragraph). Use whenever the user says "commit and push", "ship this", "write a commit message", "commit my changes", or otherwise wants staged work turned into a well-formatted commit.
+      source: /Users/josehernandezinzunza/.claude/skills/commit-push/SKILL.md
   agents: []
   prompts: []
