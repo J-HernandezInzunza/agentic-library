@@ -14,5 +14,8 @@ library:
     - name: commit-push
       description: Write a semantic commit message from staged changes, commit, and push to the remote. Enforces Jose's preferred commit style (semantic prefix, bulleted changes with filenames only, closing summary paragraph). Use whenever the user says "commit and push", "ship this", "write a commit message", "commit my changes", or otherwise wants staged work turned into a well-formatted commit.
       source: /Users/josehernandezinzunza/.claude/skills/commit-push/SKILL.md
+    - name: explain-code
+      description: Walks through code to build the user's mental model — useful for onboarding to legacy code, understanding unfamiliar files, or grokking complex logic before changing it. Language-agnostic; works on frontend (Vue, TypeScript, JavaScript) and backend (Java, Spring Boot, Python, etc.). Use this skill whenever the user asks to explain, walk through, break down, or understand a piece of code, including phrases like "how does this work", "what is this doing", "walk me through this function", "explain this file", "help me understand this", or "break this down". This is a teaching skill — explanations are structured to build understanding and invite deeper thinking, not just to answer the surface question. Do NOT use this skill for adding inline documentation (TSDoc/JSDoc/Javadoc) — that's a separate skill.
+      source: https://github.com/J-HernandezInzunza/my-claude-setup/blob/main/skills/explain-code/SKILL.md
   agents: []
   prompts: []
