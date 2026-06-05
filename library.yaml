@@ -11,6 +11,17 @@ default_dirs:
 
 library:
   skills:
+    - name: atlassian-toolkit
+      description: Self-contained CLI toolkit for Atlassian Cloud (Jira, Bitbucket, Confluence) via API token — no MCP, no npm install. Shared dependency for the bug, PR, and retro agents; other skills shell out to its bins through $ATLASSIAN_BIN_DIR. Infrastructure, not a task the model performs directly; requires ATLASSIAN_BIN_DIR + ATLASSIAN_EMAIL/ATLASSIAN_API_TOKEN set in the shell rc.
+      source: https://github.com/J-HernandezInzunza/my-engineering-library/blob/master/skills/atlassian-toolkit/SKILL.md
+    - name: bug-investigator
+      description: Investigate sparse Jira bug tickets and enrich them with a grounded root-cause theory. Fetch the ticket, trace code across repos (starting from any linked PRs the triager found), form a falsifiable theory, and append to Dev Notes or return a draft. Triggers on "investigate this", "look at this bug", "trace down this bug", or pasting a Jira bug key/URL.
+      source: https://github.com/J-HernandezInzunza/my-engineering-library/blob/master/skills/bug-investigator/SKILL.md
+      requires: ["skill:atlassian-toolkit"]
+    - name: bug-triager
+      description: Triage a Jira bug by searching Jira for related, duplicate, or previously-fixed tickets before code investigation. Ranks matches, captures their linked pull requests, optionally posts a related-tickets comment, and hands off to bug-investigator. Triggers on "triage this", "has this been reported", "find related tickets", "check for duplicates".
+      source: https://github.com/J-HernandezInzunza/my-engineering-library/blob/master/skills/bug-triager/SKILL.md
+      requires: ["skill:atlassian-toolkit"]
     - name: commit-push
       description: Write a semantic commit message from staged changes, commit, and push to the remote. Enforces Jose's preferred commit style (semantic prefix, bulleted changes with filenames only, closing summary paragraph). Use whenever the user says "commit and push", "ship this", "write a commit message", "commit my changes", or otherwise wants staged work turned into a well-formatted commit.
       source: https://github.com/J-HernandezInzunza/my-claude-setup/blob/main/skills/commit-push/SKILL.md
