@@ -6,8 +6,8 @@ default_dirs:
     - default: .claude/agents/
     - global: ~/.claude/agents/
   prompts:
-    - default: .pi/prompts/
-    - global: ~/.pi/agent/prompts/
+    - default: .claude/commands/
+    - global: ~/.claude/commands/
 
 library:
   skills:
