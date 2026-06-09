@@ -37,6 +37,9 @@ library:
     - name: generate-frontend-unit-tests
       description: Generates comprehensive unit tests for Vue components AND TypeScript logic/composables using Vitest.
       source: https://github.com/J-HernandezInzunza/my-engineering-library/blob/master/skills/generate-frontend-unit-tests/SKILL.md
+    - name: grill-me
+      description: A questioning layer that surfaces load-bearing design decisions only the user's brain can answer. Enhances other planning workflows (spec-driven development, plan mode, ticket drafting, free-form design conversations, etc.) by injecting harder questions — does not produce its own spec or requirements doc. Use this skill whenever the user says "grill me", "help me plan X", "create a plan for X", "let's spec this out", or is in any planning/spec workflow that would benefit from deeper interrogation. Trigger even when the user doesn't say "grill" — any non-trivial planning conversation should pull this in as a layer.
+      source: https://github.com/J-HernandezInzunza/my-engineering-library/blob/master/skills/grill-me/SKILL.md
   agents: []
   prompts:
     - name: triage-bug
